@@ -1,0 +1,146 @@
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
+/**
+ * Write a description of class GPA here.
+ *
+ *  John Jagger
+ *  1.0.0
+ */
+public class GPA
+{
+    // instance variables - replace the example below with your own
+    private static DecimalFormat df = new DecimalFormat("0.00");
+    public static void main()
+    {
+        double class1 = 0.0;
+        System.out.println("");
+        System.out.println("|ᕕ( ᐛ )ᕗ | ᕙ(▀̿̿Ĺ̯̿̿▀̿ ̿) ᕗ | •́ε•̀٥ |");
+        System.out.println(" #####     ######        #    ");
+        System.out.println("#     #    #     #      # #   ");
+        System.out.println("#          #     #     #   #  ");
+        System.out.println("#  ####    ######     #     #");
+        System.out.println("#     #    #          ####### ");
+        System.out.println("#     #    #          #     # ");
+        System.out.println(" #####     #          #     #");
+        System.out.println("------------------------------");
+        System.out.println("");
+        System.out.println("(͠≖ ͜ʖ͠≖) - Hello and welcome to ");
+        System.out.println("Double J's GPA calculator!! ");
+        System.out.println("");
+        System.out.println("ᕙ(▀̿̿Ĺ̯̿̿▀̿ ̿) ᕗ - Now eneter your grades for S1");
+        for (int i = 0; i < 7; i++)
+        {
+            System.out.println("------------------------------");
+            System.out.println("( ͠° ͟ʖ ͡°) - Is this class is weighted?");
+            String class1w = UserInput.getString();
+
+            System.out.println("٩(^ᴗ^)۶ - Great !! Now what's your grade?");
+            String class1g = UserInput.getString();
+
+            if (class1w.equals ("yes") || class1w.equals ("Yes"))
+            {
+                if (class1g.equals ("A") || class1g.equals ("a"))
+                {
+                    class1 += 5.0;
+                }
+                if (class1g.equals("B") || class1g.equals ("b"))
+                {
+                    class1 += 4.0;
+                }
+                if (class1g.equals ("C") || class1g.equals ("c"))
+                {
+                    class1 += 3.0;
+                }
+                if (class1g.equals ("D") || class1g.equals ("d"))
+                {
+                    class1 += 1.0;
+                }
+                if (class1g.equals ("F") || class1g.equals ("f"))
+                {
+                    class1 += 0.0;
+                }
+            }
+            if (class1w.equals ("no") || class1w.equals ("No"))
+            {
+                if (class1g.equals ("A") || class1g.equals ("a"))
+                {
+                    class1 += 4.0;
+                }
+                if (class1g.equals("B") || class1g.equals ("b"))
+                {
+                    class1 += 3.0;
+                }
+                if (class1g.equals ("C") || class1g.equals ("c"))
+                {
+                    class1 += 2.0;
+                }
+                if (class1g.equals ("D") || class1g.equals ("d"))
+                {
+                    class1 += 1.0;
+                }
+                if (class1g.equals ("F") || class1g.equals ("f"))
+                {
+                    class1 += 0.0;
+                }
+            }
+        }
+        class1 = class1/7;
+        System.out.println("your GPA is: " + df.format(class1));
+        if (class1 == 5.00)
+        {
+            System.out.println("( ͡° ͜ʖ ͡°) - That's EPIC");
+        }
+        else if (class1 == 4.00)
+        {
+            System.out.println("ᕙ(▀̿̿Ĺ̯̿̿▀̿ ̿) ᕗ - Here comes the POWER!!");
+        }
+        else if (class1 == 4.50)
+        {
+            System.out.println("(☝◞‸◟)☞ - Not bad, for a GENIUS!!");
+        }
+        else if (class1 == 4.38)
+        {
+            System.out.println("(͠≖ ͜ʖ͠≖) - Odd number, but OK");
+        }
+        else if (class1 == 3.00)
+        {
+            System.out.println("( ͡° ͜ʖ ͡°) - OK not bad");
+        }
+        else if ( class1 == 2.00)
+        {
+            System.out.println("(´･_･`) - You good bro?");
+        }
+
+        else if (class1 == 1.00)
+        {
+            System.out.println("ヽ(ﾟДﾟ)ﾉ - AHHHHHHHHHHH !!");
+        }
+
+        else if (class1 == 0.50)
+        {
+            System.out.println("ɿ(｡･ɜ･)ɾ - Ⓦⓗⓨ?");
+        }
+        else if( class1 == 0.00) 
+        {
+            System.out.println("щ（ﾟДﾟщ）- Dear dog, why‽ ");
+        }
+
+        else
+        {
+            System.out.println("(☞ ͡° ͜ʖ ͡°)☞ - ALrighty my MAN");
+        }
+        System.out.println("------------------------------");
+        System.out.println("");
+        System.out.println("( ͠° ͟ʖ ͡°) - Are you happy with these result?");
+        String class2s = UserInput.getString();
+        if (class2s.equals ("yes") || class2s.equals ("Yes"))
+        {
+            System.out.print(" ٩(^ᴗ^)۶ - GREAT");
+        }
+        else
+        {
+            System.out.println(".|•͡˘‿•͡˘|. - Have a good day now!!"); 
+        }
+
+    }
+}
